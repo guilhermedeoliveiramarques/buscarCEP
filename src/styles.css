@@ -1,0 +1,161 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo global */
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+.title {
+    font-size: 3rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    opacity: 0; /* Inicialmente, a opacidade é 0 para a animação de fade-in */
+    animation: fadeInTitle 1s ease-out forwards; /* Aplica a animação */
+  }
+  
+  @keyframes fadeInTitle {
+    from {
+      opacity: 0;
+      transform: translateY(-10px); /* Move ligeiramente para cima */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Volta para a posição original */
+    }
+  }
+  
+  
+  .containerInput {
+    display: flex;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .containerInput:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .containerInput input {
+    flex: 1;
+    border: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 4px;
+    outline: none;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .containerInput input::placeholder {
+    color: #999;
+  }
+  
+  .buttonSearch {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-out;
+  }
+  
+  .buttonSearch:hover {
+    background-color: #0056b3;
+  }
+  
+  .buttonSearch:active,
+  .buttonSearch:focus {
+    transform: scale(0.95);
+  }
+  
+  .main {
+    background-color: #fff;
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+  }
+  
+  .main h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .main span {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Animação fadeInUp */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.map {
+    width: 200px;
+    height: 150px;
+    background-color: #007bff; /* Cor verde para representar o mapa */
+    position: relative;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 0.3s ease-out; /* Adiciona transição de transformação */
+  }
+  
+  .map:hover {
+    transform: scale(1.1); /* Aumenta o tamanho em 10% quando passa o mouse */
+  }
+  
+  
+  .fa-map-marker-alt {
+    color: #fff; /* Cor do ícone */
+    font-size: 36px;
+    animation: moveMap 4s ease-in-out infinite alternate;
+  }
+  
+  @keyframes moveMap {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(100% - 200px)); 
+    }
+  }
+  
+  
